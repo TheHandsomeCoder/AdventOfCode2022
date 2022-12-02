@@ -18,12 +18,13 @@ fn main() {
 
             let result = match moves {
                 ("A","Y") | ("B","Z") | ("C","X") => 6, //Player Victory = 6
-                ("A","X") | ("B","Y") | ("C","Z") => 3, //Player Victory = 3
+                ("A","X") | ("B","Y") | ("C","Z") => 3, //Player Draw = 3
                 _ => 0 // Player loss = 0
             };
 
             return play + result;
-        }).sum();
+        })
+        .sum();
 
     println!("{}", points);
         
